@@ -9,6 +9,7 @@ https://en.wikipedia.org/wiki/VR_positional_tracking
 https://www.mechatech.co.uk/journal/how-do-common-virtual-reality-tracking-systems-work
 
 # INFO
+
 CONTEXT:
 
 - Rotation of the head

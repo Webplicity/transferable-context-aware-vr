@@ -17,6 +17,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 
+
 \title[Your Short Title]{Context-Aware-VR}
 \author{Charles Derek}
 \institute{University of Antwerp}
@@ -35,103 +36,112 @@
 
 \section{Introduction}
 
-\begin{frame}{context-extraction}
-
-
-Context characteristics: 
+\begin{frame}{Context extraction}
+Context type information: 
 
 \begin{itemize}
 	\item Eye tracking
-	\item Position tracking
-\end{itemize}
+	\item Location tracking 
+	\item Rotation of the head
+\end{itemize}	
+\vspace{0.8cm}
+	
+$\rightarrow$ Mobility\ pattern
 
+\vspace{1.23cm}
+
+$\rightarrow$ Basis\ for\ criteria\ to\ choose\ appropriate\ VR\ headsets
 \end{frame}
 
 
-\begin{frame}{Why reinforcement learning}
-
-
-Supervised learning 
-
-\begin{itemize}
-	\item needs data to increase performance
-	\item can never become better than the quality of the data
-\end{itemize}
-
+\begin{frame}{VR headset survey}
+	\begin{figure}
+		\includegraphics[scale=0.36]{"vr-one-plus".jpg}
+		\caption{Phone-driven VR}
+	\end{figure}
+	
+	Advantages:
+	\begin{itemize}
+		\item Built-in gyroscope $\rightarrow$ rotation
+		\item Location $\rightarrow$ through phone or indoor positioning system (Ken)
+	\end{itemize}
+	
+	Disadvantages:
+	\begin{itemize}
+		\item Eye tracking difficult $\rightarrow$ position of front facing camera
+		\item Precision $\rightarrow$ dependent on phone
+		\item Everything needs to be app-driven $\rightarrow$ complexity increase
+	\end{itemize}
 \end{frame}
 
 
-\begin{frame}{Why reinforcement learning}
-
-Reinforcement learning 
-
-\begin{itemize}
-	\item provides a way to have an agent learn completely by itself (without requiring data) 
-	\item agents can become better than the 'best' players
-\end{itemize}
-
-\end{frame}
-
-
-\begin{frame}{Reinforcement learning}
-
-Policy Network
-\begin{itemize}
-	\item transforms the input to the possible actions 
-\end{itemize}
-
-Policy Gradients
-\begin{itemize}
-	\item method to train a policy network
-\end{itemize}
-
-\end{frame}
-
-
-\begin{frame}{Policy Gradients}
-
-\begin{itemize}
-	\item starts off from a completely random network
-\end{itemize}
-
-\begin{figure}
-	\includegraphics[scale=0.5]{"RL".jpg}
-	\caption{The principle of RL}
-\end{figure}
-
-\begin{itemize}
-	\item calculate for each possible action a probability
-	\item agent will choose an action and get feedback (reward)
-	\item the goal of the agent is to receive as much reward as possible
-\end{itemize}
-
+\begin{frame}{VR headset survey}
+	\begin{figure}
+		\includegraphics[scale=0.06]{"vive-pro".jpg}
+		\caption{HTC Vive Pro Eye}
+	\end{figure}
+	
+	Advantages:
+	\begin{itemize}
+		\item Rotation $\rightarrow$
+		\item Location $\rightarrow$ 
+		\item Eye tracking $\rightarrow$ tobii xr sdk or Vive SRanipal SDK
+	\end{itemize}
+	
+	Disadvantages:
+	\begin{itemize}
+		\item Unity only
+		\item Precision $\rightarrow$ dependent on phone
+		\item Everything needs to be app-driven $\rightarrow$ complexity increase
+	\end{itemize}
 \end{frame}
 
 
 
-\begin{frame}{Policy Gradients}
-
-How does it improve the Policy network? 
-\begin{itemize}
-	\item In the first generations it will miserably fail, until the agent gets lucky (received a good reward)
-	\item this successful series of actions now need to be more preferred over other ones
-	\item when receiving a good reward we multiply the probability with a positive gradient
-	\item when receiving a bad reward we multiply the probability with the same negative gradient
-\end{itemize}
-
+\begin{frame}{VR headset survey}
+	\begin{figure}
+		\includegraphics[scale=0.08]{"".jpg}
+		\caption{Tobii HTC VIVE Devkit/Tobii Pro VR Integration}
+	\end{figure}
+	
+	Advantages:
+	\begin{itemize}
+		\item Compatible with tobii pro \rightarrow high compatibility: .NET, Python, Matlab, C, Unity?...
+		\item Location $\rightarrow$ indoor positioning system (Ken)
+	\end{itemize}
+	
+	Disadvantages:
+	\begin{itemize}
+		\item eye tracking difficult $\rightarrow$ position of front facing camera
+		\item Precision $\rightarrow$ dependent on phone
+		\item Everything needs to be app-driven $\rightarrow$ complexity increase
+	\end{itemize}
 \end{frame}
 
 
-\begin{frame}{"Troubles in paradise"}
 
-Unfortunately there are also downsides:
-\begin{itemize}
-	\item $Credit\ assignment\ problem$: punished hard for small mistakes
-	\item Not appropriate in complex environments
-\end{itemize}
+%https://www.engadget.com/2019-09-24-7invensun-droolon-f1-eye-tracking-vr-htc-vive-headsets.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAAijwv7BnA_gwAYzYt13CTz4YLgRuP4xGGJWHkW87vjQiFMYLIB2Ya1i7VS8l4XAO4vCaR0JW55MmiKBSNpJsLIz3LZOWjZJBvwieZBaV6EWMsywfPLVi_R4BDVP5QnxsdZE97MHHuSEfELMXM390qtq47UmEGSNY912sDZxgVfx
 
+\begin{frame}{VR headset survey}
+	A module to support eye tracking with previous HTC VR headsets:
+	'Thankfully, a Chinese company dubbed '7invensun' is soon offering a \$149 upgrade kit that will let existing HTC headsets gain the same feature.'
+	\begin{figure}
+		\includegraphics[scale=0.08]{"".jpg}
+		\caption{Tobii HTC VIVE Devkit/Tobii Pro VR Integration}
+	\end{figure}
+	
+	Advantages:
+	\begin{itemize}
+	
+		\item Location $\rightarrow$ indoor positioning system (Ken)
+	\end{itemize}
+	
+	Disadvantages:
+	\begin{itemize}
+		\item eye tracking difficult $\rightarrow$ position of front facing camera
+		\item Precision $\rightarrow$ dependent on phone
+		\item Everything needs to be app-driven $\rightarrow$ complexity increase
+	\end{itemize}
 \end{frame}
-
-
 
 \end{document}
