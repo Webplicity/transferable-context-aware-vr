@@ -1,0 +1,106 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+
+
+\title[Your Short Title]{Context-Aware-VR}
+\author{Charles Derek}
+\institute{University of Antwerp}
+\date{7 september 2020}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+\section{Introduction}
+
+
+\begin{frame}{VR headset survey}
+	\begin{figure}
+		\includegraphics[scale=0.36]{"vr-one-plus".jpg}
+		\caption{Phone-driven VR}
+	\end{figure}
+	
+	Properties:
+	\begin{itemize}
+		\item Built-in gyroscope and accelerometer $\rightarrow$ rotation
+		\item No positional tracking $\rightarrow$ through phone or indoor positioning system (Ken)
+		\item No eye tracking solutions
+		\item Precision and quality $\rightarrow$ dependent on phone
+		\item Unity or Unreal Engine $\rightarrow$ no OpenVR
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{VR headset survey}
+	\begin{figure}
+		\includegraphics[scale=0.3]{"oculus_s".jpeg}
+		\caption{Oculus Rift S}
+	\end{figure}
+	
+	Properties:
+	\begin{itemize}
+		\item Pc-driven
+	    \item No base stations $\rightarrow$ less precise
+	    \item Play area defined by controller
+      	\item OpenVR compatible $\rightarrow$ orientation
+		\item €450 (incl. 2x controllers)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{VR headset survey}
+	\begin{figure}
+		\includegraphics[scale=0.3]{"cosmos".jpeg}
+		\caption{HTC Vive Cosmos (NOT ELITE)}
+	\end{figure}
+	
+	Properties:
+	\begin{itemize}
+	\item Pc-driven
+	\item No base stations $\rightarrow$ less precise
+  	\item Play area defined by controller
+  	\item OpenVR compatible
+	\item Upgradable to ELITE
+	\item Eye tracking $\rightarrow$ Pupillabs
+	\item €800 (incl. 2x controllers)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{VR headset survey}
+	\begin{figure}
+		\includegraphics[scale=0.2]{"cosmos_elite".jpeg}
+		\caption{HTC Vive Cosmos ELITE}
+	\end{figure}
+	
+	Properties:
+	\begin{itemize}
+		\item Pc-driven
+		\item Base stations $\rightarrow$ external tracking
+		\item Eye tracking $\rightarrow$ Pupillabs
+		\item €1030 (incl. 2x base stations v1 and 2x controllers)
+	\end{itemize}
+\end{frame}
+
+\end{document}
