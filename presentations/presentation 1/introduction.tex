@@ -16,6 +16,7 @@
 
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage{lmodern,textcomp}
 
 
 \title[Your Short Title]{Context-Aware-VR}
@@ -74,24 +75,46 @@ $\rightarrow$ Basis\ for\ criteria\ to\ choose\ appropriate\ VR\ headsets
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{VR headset survey}
+	VR headsets with eye-tracking as a module:
+	\vspace{0.5cm}
+	
+	PupilLabs Binocular Add-on:
+	\begin{itemize}
+		\item €1400!
+		\item High compatibility $\rightarrow$ Python, Unity,...
+		\item HTC Vive, Vive PRO or Vive Cosmos VR $\rightarrow$ OpenVR
+	\end{itemize} 
+	
+	\begin{figure}
+		\centering
+		\subfloat{{\includegraphics[width=4cm]{"pupillabs".png} }}%
+		\qquad
+		\subfloat{{\includegraphics[width=4.5cm]{"droolon".jpg} }}%
+		\caption{Pupillabs vs. Droolon f1}%
+		\label{fig:example}%
+	\end{figure}
+	
+	Droolon f1:
+	\begin{itemize}
+		\item Only costs around €150
+		\item Vive Cosmos, Vive Focus Plus, Vive Focus or the original Vive aka Vive CE
+	\end{itemize}
+\end{frame}
+
 
 \begin{frame}{VR headset survey}
 	\begin{figure}
 		\includegraphics[scale=0.06]{"vive-pro".jpg}
-		\caption{HTC Vive Pro Eye}
+		\caption{HTC Vive Pro \textbf{Eye}}
 	\end{figure}
 	
-	Advantages:
+
 	\begin{itemize}
-		\item Rotation $\rightarrow$
-		\item Location $\rightarrow$ 
+		\item Rotation \& location $\rightarrow$ Vive sdk or OpenVR (Valve)
 		\item Eye tracking $\rightarrow$ tobii xr sdk or Vive SRanipal SDK
-	\end{itemize}
-	
-	Disadvantages:
-	\begin{itemize}
-		\item Unity only
-		\item Precision $\rightarrow$ dependent on phone
+		\item tobii xr sdk $\rightarrow$ Unity only
+		\item Pricing around €1400
 		\item Everything needs to be app-driven $\rightarrow$ complexity increase
 	\end{itemize}
 \end{frame}
@@ -104,26 +127,32 @@ $\rightarrow$ Basis\ for\ criteria\ to\ choose\ appropriate\ VR\ headsets
 		\caption{Tobii HTC VIVE Devkit/Tobii Pro VR Integration}
 	\end{figure}
 	
-	Advantages:
+
 	\begin{itemize}
 		\item Supports: Unity, Unreal and native 
-		\item 
-	\end{itemize}
-	
-	Disadvantages:
-	\begin{itemize}
-		\item 
+		\item Pricing? $\rightarrow$ through application form
 	\end{itemize}
 \end{frame}
 
 
 \begin{frame}{VR headset survey}
-	\begin{figure}
-		\includegraphics[scale=0.6]{"varjo".jpeg}
-		\caption{Varjo v2}
-	\end{figure}
-	
 
+	Qualcomm snapdragon:
+	\begin{itemize}
+		\item Native support with Tobii XR SDK (but need to contact them)
+		\item Snapdragon VR SDK
+		\item Sold out $\rightarrow$ price?
+	\end{itemize}
+
+	\begin{figure}
+		\centering
+		\subfloat{{\includegraphics[width=4cm]{"qualcomm".jpg} }}%
+		\qquad
+		\subfloat{{\includegraphics[width=3cm]{"varjo".jpeg} }}%
+		\caption{Qualcomm vs. Varjo v2}%
+	\end{figure}
+
+	Varjo:
 	\begin{itemize}
 		\item Business only
 		\item VR/AR
@@ -131,34 +160,51 @@ $\rightarrow$ Basis\ for\ criteria\ to\ choose\ appropriate\ VR\ headsets
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Platforms}
+	
+	Platforms:
+	\begin{itemize}
+		\item Unity $\rightarrow$ C# and JavaScript
+		\item Unreal Engine $\rightarrow$ C++
+		\item Vizard  $\rightarrow$ Python
+		\item Native  $\rightarrow$ No 3D environment
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Platforms}
+	Unity:
+	\begin{itemize}
+		\item HTC Vive Pro Eye $\rightarrow$ Tobii xr sdk or SRanipal SDK
+		\item Pico Neo 2 Eye $\rightarrow$ Tobii xr sdk
+		\item Tobii HTC VIVE Devkit $\rightarrow$ Tobii xr sdk
+	\end{itemize}
+
+	Unreal Engine:
+	\begin{itemize}
+		\item Tobii HTC VIVE Devkit $\rightarrow$ Tobii xr sdk
+		\item HTC Vive Pro Eye $\rightarrow$ SRanipal SDK
+	\end{itemize}
+
+	Vizard:
+	\begin{itemize}
+		\item HTC Vive Pro Eye
+		\item Tobii VR (included non-headsets)
+		\item Pupillabs
+	\end{itemize}
+
+	Native:
+	\begin{itemize}
+		\item Tobii HTC VIVE Devkit $\rightarrow$ Tobii xr sdk
+		\item Qualcomm Snapdragon VR 845 $\rightarrow$ Tobii xr sdk
+	\end{itemize}
+	
+
+\end{frame}
+
 
 %https://www.engadget.com/2019-09-24-7invensun-droolon-f1-eye-tracking-vr-htc-vive-headsets.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAAijwv7BnA_gwAYzYt13CTz4YLgRuP4xGGJWHkW87vjQiFMYLIB2Ya1i7VS8l4XAO4vCaR0JW55MmiKBSNpJsLIz3LZOWjZJBvwieZBaV6EWMsywfPLVi_R4BDVP5QnxsdZE97MHHuSEfELMXM390qtq47UmEGSNY912sDZxgVfx
 
-\begin{frame}{VR headset survey}
-	VR headsets with eye-tracking as a module:
-	\vspace{0.5cm}
-	
-	PupilLabs Binocular Add-on:
-	\begin{itemize}
-		\item €1400!
-		\item High compatibility: $\rigtharrow$ Python, Unity,...
-		\item HTC Vive, Vive PRO or Vive Cosmos VR
-    \end{itemize} 
-	
-\begin{figure}
-	\centering
-	\subfloat{{\includegraphics[width=4cm]{"pupillabs".png} }}%
-	\qquad
-	\subfloat{{\includegraphics[width=4.5cm]{"droolon".jpg} }}%
-	\caption{Pupillabs vs. Droolon f1}%
-	\label{fig:example}%
-\end{figure}
 
-	Droolon f1:
-	\begin{itemize}
-		\item Only costs around €150
-		\item Vive Cosmos, Vive Focus Plus, Vive Focus or the original Vive aka Vive CE
-	\end{itemize}
-\end{frame}
 
 \end{document}
