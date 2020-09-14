@@ -16,12 +16,13 @@
 
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
-
+\usepackage{lmodern,textcomp}
+\usepackage{multirow}
 
 \title[Your Short Title]{Context-Aware-VR}
 \author{Charles Derek}
 \institute{University of Antwerp}
-\date{7 september 2020}
+\date{14 september 2020}
 
 \begin{document}
 
@@ -63,7 +64,7 @@
 	Properties:
 	\begin{itemize}
 		\item Pc-driven
-	    \item No base stations $\rightarrow$ less precise
+	    \item No base stations $\rightarrow$ inside-out tracking (less precise)
 	    \item Play area defined by controller
       	\item OpenVR compatible $\rightarrow$ orientation
 		\item €450 (incl. 2x controllers)
@@ -83,7 +84,7 @@
   	\item Play area defined by controller
   	\item OpenVR compatible
 	\item Upgradable to ELITE
-	\item Eye tracking $\rightarrow$ Pupillabs
+	\item Eye tracking $\rightarrow$ Pupillabs (expensive)
 	\item €800 (incl. 2x controllers)
 \end{itemize}
 \end{frame}
@@ -98,9 +99,58 @@
 	\begin{itemize}
 		\item Pc-driven
 		\item Base stations $\rightarrow$ external tracking
-		\item Eye tracking $\rightarrow$ Pupillabs
+		\item Eye tracking $\rightarrow$ Pupillabs (expensive)
 		\item €1030 (incl. 2x base stations v1 and 2x controllers)
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{VR headset survey}
+	VR headsets with eye-tracking as a module:
+	\vspace{0.5cm}
+	
+	PupilLabs Binocular Add-on:
+	\begin{itemize}
+		\item €1400!
+		\item High compatibility $\rightarrow$ Python, Unity,...
+		\item HTC Vive, Vive PRO or Vive Cosmos VR $\rightarrow$ OpenVR
+	\end{itemize} 
+	
+	\begin{figure}
+		\centering
+		\subfloat{{\includegraphics[width=4cm]{"pupillabs".png} }}%
+		\qquad
+		\subfloat{{\includegraphics[width=4.5cm]{"droolon".jpg} }}%
+		\caption{Pupillabs vs. Droolon f1}%
+		\label{fig:example}%
+	\end{figure}
+	
+	Droolon f1:
+	\begin{itemize}
+		\item Only costs around €150
+		\item Vive Cosmos, Vive Focus Plus, Vive Focus or the original Vive aka Vive CE
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{VR headset overview}
+	\begin{table}[ht!]
+		\tiny
+		\normalsize
+		\centering
+		\resizebox{\textwidth}{!}{
+		\begin{tabular}{|p{17mm}||c|c|c|c|c|c|c|} \hline
+			Headset               & Price & Base stations & PC   & Orientation & Positional & Eye tracking     & SDK \\ \hline \hline
+			Phone driven          & €0    & No            & No   & ?           & ?          & No               & ?  \\ \hline
+			Oculus Go             & €378  & No            & No   & ?           & Yes        & No               & No  \\ \hline
+			Oculus Quest          & €450  & No            & Both & ?           & Yes        & No               & ?  \\ \hline
+			Oculus Rift S         & €450  & No            & Yes  & Yes         & Yes        & No               & OpenVR  \\ \hline
+			HTC Vive (original)   & €250+€300  & Yes           & Yes  & Yes         & Yes        & Pupil Labs       & OpenVR \\ \hline
+			HTC Vive Cosmos       & €800  & No            & Yes  & Yes         & Yes        & Pupil Labs       & OpenVR \\ \hline
+		    HTC Vive Focus Plus   & €870  & Yes           & No   & Yes         & Yes        & Pupil Labs       & OpenVR  \\ \hline
+			Pico Neo 2 Eye        & €945  & No            & Yes  & Yes         & Yes        & Yes              & Tobii sdk \\ \hline
+			HTC Vive Cosmos Elite & €1030 & Yes           & Yes  & Yes         & Yes        & Pupil Labs       & OpenVR  \\ \hline
+			HTC Vive Pro Eye      & €1400 & Yes           & Yes  & Yes         & Yes        & Yes & OpenVR \\ \hline
+		\end{tabular}}
+	\end{table}
 \end{frame}
 
 \end{document}
