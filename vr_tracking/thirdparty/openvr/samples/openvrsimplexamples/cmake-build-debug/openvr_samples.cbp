@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="openvr_samples"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\openvrsimplexamples\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="openvrsimplexamples">
+				<Option output="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/bin/linux64/openvrsimplexamples" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/bin/linux64"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLINUX"/>
+					<Add option="-DPOSIX"/>
+					<Add option="-DGNUC"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/openvrsimplexamples"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/openvrsimplexamples_autogen/include"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/."/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/thirdparty/sdl2-2.0.3/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../headers"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/thirdparty/vulkan-1.0.49.0/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 openvrsimplexamples"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="openvrsimplexamples/fast">
+				<Option output="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/bin/linux64/openvrsimplexamples" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/bin/linux64"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLINUX"/>
+					<Add option="-DPOSIX"/>
+					<Add option="-DGNUC"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/openvrsimplexamples"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/openvrsimplexamples_autogen/include"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/."/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/thirdparty/sdl2-2.0.3/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../headers"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/thirdparty/vulkan-1.0.49.0/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 openvrsimplexamples/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="openvrsimplexamples_autogen">
+				<Option working_dir="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 openvrsimplexamples_autogen"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/openvrsimplexamples_autogen/mocs_compilation.cpp">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/openvrsimplexamples/src/main.cpp">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/Matrices.cpp">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/Matrices.h">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/Vectors.h">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/compat.h">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/lodepng.cpp">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/lodepng.h">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/pathtools.cpp">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/pathtools.h">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/strtools.cpp">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/strtools.h">
+			<Option target="openvrsimplexamples"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/openvrsimplexamples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\openvrsimplexamples\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

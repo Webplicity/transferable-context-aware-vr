@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="openvr_samples" targetName="tracked_camera_openvr_sample" />
+      <config projectName="openvr_samples" targetName="hellovr_vulkan_autogen" />
+      <config projectName="openvr_samples" targetName="openvrsimplexamples_autogen" />
+      <config projectName="openvr_samples" targetName="hellovr_vulkan" />
+      <config projectName="openvr_samples" targetName="vr_gui_autogen" />
+      <config projectName="openvr_samples" targetName="helloworldoverlay_autogen" />
+      <config projectName="openvr_samples" targetName="vr_gui" />
+      <config projectName="openvr_samples" targetName="helloworldoverlay" />
+      <config projectName="openvr_samples" targetName="driver_sample" />
+      <config projectName="openvr_samples" targetName="hellovr_opengl_autogen" />
+      <config projectName="openvr_samples" targetName="tracked_camera_openvr_sample_autogen" />
+      <config projectName="openvr_samples" targetName="hellovr_opengl" />
+      <config projectName="openvr_samples" targetName="openvrsimplexamples" />
+      <config projectName="openvr_samples" targetName="driver_sample_autogen" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4670cbd3-ea2c-45ec-9827-5cedb6556c4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1jHlRTTddoLxsWOBu4bnL9fj6On" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../openvrsimplexamples-master" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/samples" />
+      <recent name="$PROJECT_DIR$/samples/thirdparty" />
+      <recent name="$PROJECT_DIR$/samples/openvrsimplexamples" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/samples/thirdparty" />
+      <recent name="$PROJECT_DIR$/samples/openvrsimplexamples" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.vr_gui">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="driver_sample" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="driver_sample" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="driver_sample_autogen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="driver_sample_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hellovr_opengl" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="hellovr_opengl" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="openvr_samples" RUN_TARGET_NAME="hellovr_opengl">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hellovr_opengl_autogen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="hellovr_opengl_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hellovr_vulkan" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="hellovr_vulkan" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="openvr_samples" RUN_TARGET_NAME="hellovr_vulkan">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hellovr_vulkan_autogen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="hellovr_vulkan_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="helloworldoverlay" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="helloworldoverlay" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="openvr_samples" RUN_TARGET_NAME="helloworldoverlay">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="helloworldoverlay_autogen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="helloworldoverlay_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="openvrsimplexamples" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="openvrsimplexamples" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="openvr_samples" RUN_TARGET_NAME="openvrsimplexamples">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="openvrsimplexamples_autogen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="openvrsimplexamples_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tracked_camera_openvr_sample" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="tracked_camera_openvr_sample" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="openvr_samples" RUN_TARGET_NAME="tracked_camera_openvr_sample">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tracked_camera_openvr_sample_autogen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="tracked_camera_openvr_sample_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="vr_gui" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="vr_gui" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="openvr_samples" RUN_TARGET_NAME="vr_gui">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="vr_gui_autogen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="openvr_samples" TARGET_NAME="vr_gui_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.driver_sample" />
+      <item itemvalue="CMake Application.driver_sample_autogen" />
+      <item itemvalue="CMake Application.hellovr_opengl" />
+      <item itemvalue="CMake Application.hellovr_opengl_autogen" />
+      <item itemvalue="CMake Application.hellovr_vulkan" />
+      <item itemvalue="CMake Application.hellovr_vulkan_autogen" />
+      <item itemvalue="CMake Application.helloworldoverlay" />
+      <item itemvalue="CMake Application.helloworldoverlay_autogen" />
+      <item itemvalue="CMake Application.openvrsimplexamples" />
+      <item itemvalue="CMake Application.openvrsimplexamples_autogen" />
+      <item itemvalue="CMake Application.tracked_camera_openvr_sample" />
+      <item itemvalue="CMake Application.tracked_camera_openvr_sample_autogen" />
+      <item itemvalue="CMake Application.vr_gui" />
+      <item itemvalue="CMake Application.vr_gui_autogen" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4670cbd3-ea2c-45ec-9827-5cedb6556c4d" name="Default Changelist" comment="" />
+      <created>1603468891107</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603468891107</updated>
+      <workItem from="1603468892870" duration="28000" />
+      <workItem from="1603469006822" duration="1105000" />
+      <workItem from="1603897198900" duration="94000" />
+      <workItem from="1603897322147" duration="1432000" />
+      <workItem from="1603900353571" duration="4683000" />
+      <workItem from="1604594791768" duration="1764000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="418" y="271" width="1084" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603897366010">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="418" y="271" width="1084" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1173/1920.0.1920.1200@0.27.1920.1173" timestamp="1603897366010" />
+    <state x="737" y="393" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604596555404">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="737" y="393" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1173/1920.0.1920.1200@0.27.1920.1173" timestamp="1604596555404" />
+    <state x="2657" y="374" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1173/1920.0.1920.1200@1920.0.1920.1200" timestamp="1603469055268" />
+    <state width="1878" height="316" key="GridCell.Tab.0.bottom" timestamp="1604596555413">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1878" height="316" key="GridCell.Tab.0.bottom/0.27.1920.1173/1920.0.1920.1200@0.27.1920.1173" timestamp="1604596555413" />
+    <state width="1878" height="316" key="GridCell.Tab.0.center" timestamp="1604596555413">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1878" height="316" key="GridCell.Tab.0.center/0.27.1920.1173/1920.0.1920.1200@0.27.1920.1173" timestamp="1604596555413" />
+    <state width="1878" height="316" key="GridCell.Tab.0.left" timestamp="1604596555413">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1878" height="316" key="GridCell.Tab.0.left/0.27.1920.1173/1920.0.1920.1200@0.27.1920.1173" timestamp="1604596555413" />
+    <state width="1878" height="316" key="GridCell.Tab.0.right" timestamp="1604596555413">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1878" height="316" key="GridCell.Tab.0.right/0.27.1920.1173/1920.0.1920.1200@0.27.1920.1173" timestamp="1604596555413" />
+    <state x="464" y="248" width="992" height="737" key="SettingsEditor" timestamp="1604595772589">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="464" y="248" width="992" height="737" key="SettingsEditor/0.27.1920.1173/1920.0.1920.1200@0.27.1920.1173" timestamp="1604595772589" />
+    <state x="1234" y="394" width="392" height="446" key="chooseDestDirectoryDialog" timestamp="1603901589656">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="1234" y="394" width="392" height="446" key="chooseDestDirectoryDialog/0.27.1920.1173/1920.0.1920.1200@0.27.1920.1173" timestamp="1603901589656" />
+  </component>
+</project>

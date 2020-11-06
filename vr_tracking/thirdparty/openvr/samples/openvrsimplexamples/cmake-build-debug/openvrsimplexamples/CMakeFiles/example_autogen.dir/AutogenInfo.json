@@ -1,0 +1,125 @@
+{
+	"BUILD_DIR" : "/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/example_autogen",
+	"CMAKE_BINARY_DIR" : "/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/openvrsimplexamples",
+	"CMAKE_EXECUTABLE" : "/home/charles/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/bin/cmake/linux/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/Matrices.h",
+			"MU",
+			"4MHYQNOUPP/moc_Matrices.cpp"
+		],
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/Vectors.h",
+			"MU",
+			"4MHYQNOUPP/moc_Vectors.cpp"
+		],
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/compat.h",
+			"MU",
+			"4MHYQNOUPP/moc_compat.cpp"
+		],
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/lodepng.h",
+			"MU",
+			"4MHYQNOUPP/moc_lodepng.cpp"
+		],
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/pathtools.h",
+			"MU",
+			"4MHYQNOUPP/moc_pathtools.cpp"
+		],
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/strtools.h",
+			"MU",
+			"4MHYQNOUPP/moc_strtools.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/example_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/example_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "GNUC", "LINUX", "POSIX" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples",
+		"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/openvrsimplexamples",
+		"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master",
+		"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/thirdparty/sdl2-2.0.3/include",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/home/charles/Documents/UA/Context-aware-VR/headers",
+		"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/thirdparty/vulkan-1.0.49.0/include",
+		"/usr/include",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/home/charles/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/example_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 6,
+	"PARSE_CACHE_FILE" : "/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/CMakeFiles/example_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 12,
+	"SETTINGS_FILE" : "/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/cmake-build-debug/openvrsimplexamples/CMakeFiles/example_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/openvrsimplexamples/src/main.cpp",
+			"MU"
+		],
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/Matrices.cpp",
+			"MU"
+		],
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/lodepng.cpp",
+			"MU"
+		],
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/pathtools.cpp",
+			"MU"
+		],
+		[
+			"/home/charles/Documents/UA/Context-aware-VR/openvrsimplexamples-master/shared/strtools.cpp",
+			"MU"
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="openvr_api"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="openvr_api">
+				<Option output="/home/charles/Documents/UA/Context-aware-VR/openvr-master/bin/linux64/libopenvr_api.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DVR_API_PUBLIC"/>
+					<Add option="-DLINUX"/>
+					<Add option="-DPOSIX"/>
+					<Add option="-DLINUX64"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/../headers"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 openvr_api"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="openvr_api/fast">
+				<Option output="/home/charles/Documents/UA/Context-aware-VR/openvr-master/bin/linux64/libopenvr_api.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DVR_API_PUBLIC"/>
+					<Add option="-DLINUX"/>
+					<Add option="-DPOSIX"/>
+					<Add option="-DLINUX64"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/../headers"/>
+					<Add directory="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 openvr_api/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/charles/Documents/UA/Context-aware-VR/openvr-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/jsoncpp.cpp">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/openvr_api_public.cpp">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/dirtools_public.cpp">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/dirtools_public.h">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/envvartools_public.cpp">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/envvartools_public.h">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/hmderrors_public.cpp">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/hmderrors_public.h">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/pathtools_public.cpp">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/pathtools_public.h">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/sharedlibtools_public.cpp">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/sharedlibtools_public.h">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/strtools_public.cpp">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/strtools_public.h">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/vrpathregistry_public.cpp">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/vrcommon/vrpathregistry_public.h">
+			<Option target="openvr_api"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/home/charles/Documents/UA/Context-aware-VR/openvr-master/src/openvr.pc.in">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
