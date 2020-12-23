@@ -241,7 +241,7 @@ include_directories(
         ${SDL2_INCLUDE_DIR}
         ${QT_INCLUDE_DIRS}
         ${OPENVR_INCLUDE_DIR}
-#        ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/sdl2_ttf-2.0.14/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/sdl2_ttf-2.0.14/include
 )
 
 if(NOT (${CMAKE_SYSTEM_NAME} MATCHES "Darwin"))

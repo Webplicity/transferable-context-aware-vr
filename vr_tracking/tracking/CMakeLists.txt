@@ -30,11 +30,12 @@ target_link_libraries(${TARGET_NAME}
   ${CMAKE_DL_LIBS}
   ${EXTRA_LIBS}
   ${SDL2TFF_LIBRARIES}
-  SDL
-#  /home/charles/Documents/UA/vr_tracking/thirdparty/sdl2_ttf-2.0.14/lib/x86/SDL2_ttf.lib
+#  SDL
+  #/home/charles/Documents/UA/vr_tracking/thirdparty/sdl2_ttf-2.0.14/lib/x86/SDL2_ttf.lib
   /usr/lib/x86_64-linux-gnu/libSDL2_ttf-2.0.so.0
+  /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0
 #  SDL_ttf
-#  ${CMAKE_CURRENT_SOURCE_DIR}/../thirdparty/sdl2_ttf-2.0.14/lib/x64
+# ${CMAKE_CURRENT_SOURCE_DIR}/../thirdparty/sdl2_ttf-2.0.14/lib/x64
 )
 
 setTargetOutputDirectory(${TARGET_NAME})
