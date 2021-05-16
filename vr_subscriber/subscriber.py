@@ -8,6 +8,10 @@ import math
 import numpy as np
 from psychopy import visual, event
 import paho.mqtt.client as mqtt
+import time
+from fastlogging import LogInit
+
+logger = LogInit(pathName="./test1.log", console=True, colors=True)
 
 
 
@@ -46,7 +50,7 @@ class Subscriber:
         self.devices = {}
         self.mqtt_mode = mqtt_mode
         self.count = 0
-        if mqtt:
+        if mqtt_mode:
             self.client = mqtt.Client()
             self.client.connect('127.0.0.1', 1883)
         else:
@@ -77,6 +81,8 @@ class Subscriber:
     def run(self):
         print('Listening...')
         while True:
+            # self.update_devices('HMD,1,1,1,0.1,0.1,0.1,0.1')
+            # continue
             if self.mqtt_mode:
                 self.client.on_connect = self.on_connect
                 self.client.on_message = self.on_message
@@ -89,11 +95,14 @@ class Subscriber:
                 msg = msg.split('\x00', 1)[0]
                 self.update_devices(msg)
 
+    def current_milli_time(self):
+        return round(time.time() * 1000)
 
     def update_devices(self, msg):
         device, x, y, z, qw, qx, qy, qz = msg.split(',')
         x, y, z, qw, qx, qy, qz = float(x), float(y), float(z), float(qw), float(qx), float(qy), float(qz)
         try:
+            logger.info(msg + ' | ' + str(self.current_milli_time()))
             self.devices[device].update((x, y, z), (qw, qx, qy, qz))
             # print((qw, qx, qy, qz))
         except KeyError:
