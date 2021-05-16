@@ -233,6 +233,9 @@ file(GLOB SHARED_SRC_FILES
         ${SHARED_SRC_DIR}/*.cpp
         ${SHARED_SRC_DIR}/*.h
         )
+set (MQTT_INCLUDE_DIR ${THIRDPARTY_DIR}/paho.mqtt.cpp/src)
+
+#add_subdirectory(./thirdparty/paho.mqtt.cpp)
 
 include_directories(
         .
@@ -241,7 +244,8 @@ include_directories(
         ${SDL2_INCLUDE_DIR}
         ${QT_INCLUDE_DIRS}
         ${OPENVR_INCLUDE_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/sdl2_ttf-2.0.14/include
+#        ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/sdl2_ttf-2.0.14/include
+        ${MQTT_INCLUDE_DIR}
 )
 
 if(NOT (${CMAKE_SYSTEM_NAME} MATCHES "Darwin"))
@@ -252,6 +256,8 @@ endif()
 ## SUBDIRECTORIES ##
 
 add_subdirectory(tracking)
+add_subdirectory (${THIRDPARTY_DIR}/paho.mqtt.cpp)
+
 
 # -----------------------------------------------------------------------------
 

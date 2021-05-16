@@ -1,10 +1,15 @@
 #include <iostream>
 #include <vector>
+#include <string>
 #include <openvr.h>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 //#include "SDL2/SDL_ttf.h"
 #include "utils.h"
+#include <zmq.hpp>
+//#include <paho-mqtt3a/client.h>
+#include "mqtt/client.h"
+//#include "mqtt/async_client.h"
 
 
 // ----------------
@@ -34,10 +39,94 @@ void process_vr_event(const vr::VREvent_t &event);
 
 void exit();
 
+vr::HmdQuaternion_t GetRotation(vr::HmdMatrix34_t matrix) {
+    vr::HmdQuaternion_t q;
+
+    q.w = sqrt(fmax(0, 1 + matrix.m[0][0] + matrix.m[1][1] + matrix.m[2][2])) / 2;
+    q.x = sqrt(fmax(0, 1 + matrix.m[0][0] - matrix.m[1][1] - matrix.m[2][2])) / 2;
+    q.y = sqrt(fmax(0, 1 - matrix.m[0][0] + matrix.m[1][1] - matrix.m[2][2])) / 2;
+    q.z = sqrt(fmax(0, 1 - matrix.m[0][0] - matrix.m[1][1] + matrix.m[2][2])) / 2;
+    q.x = copysign(q.x, matrix.m[2][1] - matrix.m[1][2]);
+    q.y = copysign(q.y, matrix.m[0][2] - matrix.m[2][0]);
+    q.z = copysign(q.z, matrix.m[1][0] - matrix.m[0][1]);
+    return q;
+}
+
+/**
+ * A callback class for use with the main MQTT client.
+ */
+class callback : public virtual mqtt::callback
+{
+public:
+    void connection_lost(const string& cause) override {
+        cout << "\nConnection lost" << endl;
+        if (!cause.empty())
+            cout << "\tcause: " << cause << endl;
+    }
+
+    void delivery_complete(mqtt::delivery_token_ptr tok) override {
+//        cout << "\tDelivery complete for token: "
+//             << (tok ? tok->get_message_id() : -1) << endl;
+    }
+};
+
+/**
+ * A base action listener.
+ */
+class action_listener : public virtual mqtt::iaction_listener
+{
+protected:
+    void on_failure(const mqtt::token& tok) override {
+        cout << "\tListener failure for token: "
+             << tok.get_message_id() << endl;
+    }
+
+    void on_success(const mqtt::token& tok) override {
+//        cout << "\tListener success for token: "
+//             << tok.get_message_id() << endl;
+    }
+};
+
 int main(int argv, char **args) {
 
     if (init_SDL() != 0) return -1;
     if (init_OpenVR() != 0) return -1;
+    bool MQTT = true;
+
+    // MQTT
+    const string PERSIST_DIR			{ "./persist" };
+    string address = "tcp://0.0.0.0:1883";
+    string clientID = "1";
+    const string TOPIC { "VR_CONTEXT" };
+    const int  QOS = 1;
+    const char* LWT_PAYLOAD = "Last will and testament.";
+
+    cout << "Initializing for server '" << address << "'..." << endl;
+    mqtt::async_client client(address, clientID, PERSIST_DIR);
+    cout << "test" << endl;
+    callback cb;
+    client.set_callback(cb);
+
+    auto connOpts = mqtt::connect_options_builder()
+            .clean_session(true)
+            .will(mqtt::message(TOPIC, LWT_PAYLOAD, QOS))
+            .finalize();
+
+    cout << "  ...OK" << endl;
+
+    cout << "\nConnecting..." << endl;
+    mqtt::token_ptr conntok = client.connect(connOpts);
+    cout << "Waiting for the connection..." << endl;
+    conntok->wait();
+    cout << "  ...OK" << endl;
+
+
+    // ZMQ
+//    zmq::context_t ctx;
+//    zmq::socket_t sock(ctx, zmq::socket_type::pair);
+    if (not MQTT) {
+//        sock.bind("tcp://127.0.0.1:5555");
+    }
 
     while (!app_end) {
         SDL_RenderClear(renderer); // Clear screen in order to render new stuff
@@ -56,6 +145,7 @@ int main(int argv, char **args) {
                                                         tracked_device_pose, vr::k_unMaxTrackedDeviceCount);
 
             int actual_y = 110, tracked_device_count = 0;
+//            cout << vr::k_unMaxTrackedDeviceCount << endl;
             for (int nDevice = 0; nDevice < vr::k_unMaxTrackedDeviceCount; nDevice++) {
                 if ((tracked_device_pose[nDevice].bDeviceIsConnected) && (tracked_device_pose[nDevice].bPoseIsValid)) {
                     SDL_Color color = green;
@@ -73,6 +163,31 @@ int main(int argv, char **args) {
                     float v[3] = {tracked_device_pose[nDevice].mDeviceToAbsoluteTracking.m[0][3],
                                   tracked_device_pose[nDevice].mDeviceToAbsoluteTracking.m[1][3],
                                   tracked_device_pose[nDevice].mDeviceToAbsoluteTracking.m[2][3]};
+
+
+                    std::string pos3D =
+                            std::to_string(tracked_device_pose[nDevice].mDeviceToAbsoluteTracking.m[0][3]) + "," +
+                            std::to_string(tracked_device_pose[nDevice].mDeviceToAbsoluteTracking.m[1][3]) + "," +
+                            std::to_string(tracked_device_pose[nDevice].mDeviceToAbsoluteTracking.m[2][3]);
+
+                    std::string device = "UNK,";
+                    if (nDevice == 0) {
+                        vr::HmdQuaternion_t quaternion = GetRotation(
+                                tracked_device_pose[nDevice].mDeviceToAbsoluteTracking);
+                        std::string quat = std::to_string(quaternion.w) + ',' + std::to_string(quaternion.x) + ',' +
+                                           std::to_string(quaternion.y) + ',' + std::to_string(quaternion.z);
+                        device = "HMD,";
+                        std::string msg = device + pos3D + ',' + quat;
+                        if(MQTT){
+                            mqtt::message_ptr pubmsg = mqtt::make_message(TOPIC, msg);
+                            pubmsg->set_qos(QOS);
+                            client.publish(pubmsg)->wait_for(0);
+                        } else {
+                            char data[128];
+                            strcpy(data, msg.c_str());
+//                            sock.send(zmq::str_buffer(data), zmq::send_flags::dontwait);
+                        }
+                    }
 
                     print_text(vftos(v, 2).c_str(), color, 50, actual_y + 25);
                     actual_y += 60;
@@ -187,6 +302,8 @@ int init_OpenVR() {
 
     // Obtain some basic information given by the runtime
     int base_stations_count = 0;
+    cout << vr::k_unMaxTrackedDeviceCount << endl;
+
     for (uint32_t td = vr::k_unTrackedDeviceIndex_Hmd; td < vr::k_unMaxTrackedDeviceCount; td++) {
 
         if (vr_context->IsTrackedDeviceConnected(td)) {
@@ -217,8 +334,7 @@ int init_OpenVR() {
     // Check whether both base stations are found, not mandatory but just in case...
     if (base_stations_count < 2) {
         cout << "There was a problem indentifying the base stations, please check they are powered on" << endl;
-
-        return -1;
+        cout << "(or there are none)" << endl;
     }
 
     return 0;

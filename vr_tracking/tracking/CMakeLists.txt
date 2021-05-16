@@ -21,6 +21,12 @@ find_library(SDL2TTF_LIBRARIES SDL_ttf)
 #set(CMAKE_CXX_FLAGS_RELEASE "SDL2/SDL_ttf")
 #set(GCC_COVERAGE_COMPILE_FLAGS "-Wall -Wextra -Wconversion")
 #set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}" )
+#find cppzmq wrapper, installed by make of cppzmq
+find_package(cppzmq)
+#find_package(PahoMqttCpp REQUIRED)
+
+
+#set (MQTT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/paho.mqtt.cpp)
 
 target_link_libraries(${TARGET_NAME}
   ${OPENGL_LIBRARIES}
@@ -30,12 +36,15 @@ target_link_libraries(${TARGET_NAME}
   ${CMAKE_DL_LIBS}
   ${EXTRA_LIBS}
   ${SDL2TFF_LIBRARIES}
-#  SDL
-  #/home/charles/Documents/UA/vr_tracking/thirdparty/sdl2_ttf-2.0.14/lib/x86/SDL2_ttf.lib
   /usr/lib/x86_64-linux-gnu/libSDL2_ttf-2.0.so.0
-  /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0
+  #  SDL #bovenste lijn gebruiken ipv dit
+  cppzmq
+  paho-mqtt3a
+  paho-cpp-objs
+#  mqtt paho-mqtt3a
+#  /home/charles/Documents/UA/vr_tracking/thirdparty/sdl2_ttf-2.0.14/lib/x86/SDL2_ttf.lib
 #  SDL_ttf
-# ${CMAKE_CURRENT_SOURCE_DIR}/../thirdparty/sdl2_ttf-2.0.14/lib/x64
+#  ${CMAKE_CURRENT_SOURCE_DIR}/../thirdparty/sdl2_ttf-2.0.14/lib/x64
 )
 
 setTargetOutputDirectory(${TARGET_NAME})
