@@ -91,7 +91,7 @@ int main(int argv, char **args) {
 
     if (init_SDL() != 0) return -1;
     if (init_OpenVR() != 0) return -1;
-    bool MQTT = true;
+    bool MQTT = false;
 
     // MQTT
     const string PERSIST_DIR			{ "./persist" };
@@ -122,10 +122,10 @@ int main(int argv, char **args) {
 
 
     // ZMQ
-//    zmq::context_t ctx;
-//    zmq::socket_t sock(ctx, zmq::socket_type::pair);
+    zmq::context_t ctx;
+    zmq::socket_t sock(ctx, zmq::socket_type::pair);
     if (not MQTT) {
-//        sock.bind("tcp://127.0.0.1:5555");
+        sock.bind("tcp://127.0.0.1:5555");
     }
 
     while (!app_end) {
@@ -185,7 +185,7 @@ int main(int argv, char **args) {
                         } else {
                             char data[128];
                             strcpy(data, msg.c_str());
-//                            sock.send(zmq::str_buffer(data), zmq::send_flags::dontwait);
+                            sock.send(zmq::str_buffer(data), zmq::send_flags::dontwait);
                         }
                     }
 

@@ -46,7 +46,7 @@ class Subscriber:
         self.devices = {}
         self.mqtt_mode = mqtt_mode
         self.count = 0
-        if mqtt:
+        if self.mqtt_mode:
             self.client = mqtt.Client()
             self.client.connect('127.0.0.1', 1883)
         else:
