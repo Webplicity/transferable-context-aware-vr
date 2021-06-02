@@ -92,7 +92,7 @@ int main(int argv, char **args) {
 
     if (init_SDL() != 0) return -1;
     if (init_OpenVR() != 0) return -1;
-    bool MQTT = true;
+    bool MQTT = false;
 
     // MQTT
     const string PERSIST_DIR			{ "./persist" };
