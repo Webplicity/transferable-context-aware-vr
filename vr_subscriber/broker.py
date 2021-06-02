@@ -2,7 +2,7 @@ import logging
 import asyncio
 from hbmqtt.client import MQTTClient, ClientException
 from hbmqtt.broker import Broker
-from hbmqtt.mqtt.constants import QOS_1
+from hbmqtt.mqtt.constants import QOS_1, QOS_0
 
 logger = logging.getLogger(__name__)
 
@@ -13,7 +13,7 @@ config = {
             'bind': '127.0.0.1:1883'
         }
     },
-    'sys_interval': 10,
+    'sys_interval': 0.0001,
     'topic-check': {
         'enabled': False
     }
@@ -30,7 +30,7 @@ def brokerGetMessage():
     C = MQTTClient()
     yield from C.connect('mqtt://127.0.0.1:1883/')
     yield from C.subscribe([
-        ("VR_CONTEXT", QOS_1)
+        ("VR_CONTEXT", QOS_0)
     ])
     logger.info('Subscribed!')
     # try:

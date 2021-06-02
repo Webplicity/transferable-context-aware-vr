@@ -10,6 +10,7 @@
 //#include <paho-mqtt3a/client.h>
 #include "mqtt/client.h"
 //#include "mqtt/async_client.h"
+#include <unistd.h>
 
 
 // ----------------
@@ -91,15 +92,15 @@ int main(int argv, char **args) {
 
     if (init_SDL() != 0) return -1;
     if (init_OpenVR() != 0) return -1;
-    bool MQTT = false;
+    bool MQTT = true;
 
     // MQTT
     const string PERSIST_DIR			{ "./persist" };
     string address = "tcp://0.0.0.0:1883";
-    string clientID = "1";
+    string clientID = "8";
     const string TOPIC { "VR_CONTEXT" };
-    const int  QOS = 1;
-    const char* LWT_PAYLOAD = "Last will and testament.";
+    const int  QOS = 0;
+//    const char* LWT_PAYLOAD = "Last will and testament.";
 
     cout << "Initializing for server '" << address << "'..." << endl;
     mqtt::async_client client(address, clientID, PERSIST_DIR);
@@ -109,17 +110,21 @@ int main(int argv, char **args) {
 
     auto connOpts = mqtt::connect_options_builder()
             .clean_session(true)
-            .will(mqtt::message(TOPIC, LWT_PAYLOAD, QOS))
             .finalize();
+//    .will(mqtt::message(TOPIC, LWT_PAYLOAD, QOS))
 
-    cout << "  ...OK" << endl;
 
-    cout << "\nConnecting..." << endl;
-    mqtt::token_ptr conntok = client.connect(connOpts);
-    cout << "Waiting for the connection..." << endl;
-    conntok->wait();
-    cout << "  ...OK" << endl;
+    mqtt::token_ptr conntok;
 
+    if (MQTT) {
+        cout << "  ...OK" << endl;
+
+        cout << "\nConnecting..." << endl;
+        conntok = client.connect(connOpts);
+        cout << "Waiting for the connection..." << endl;
+        conntok->wait();
+        cout << "  ...OK" << endl;
+    }
 
     // ZMQ
     zmq::context_t ctx;
@@ -181,7 +186,8 @@ int main(int argv, char **args) {
                         if(MQTT){
                             mqtt::message_ptr pubmsg = mqtt::make_message(TOPIC, msg);
                             pubmsg->set_qos(QOS);
-                            client.publish(pubmsg)->wait_for(0);
+                            client.publish(pubmsg);
+                            usleep(10000); //mqtt broker can't handle a faster rate.
                         } else {
                             char data[128];
                             strcpy(data, msg.c_str());

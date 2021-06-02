@@ -10,9 +10,82 @@ from psychopy import visual, event
 import paho.mqtt.client as mqtt
 import time
 from fastlogging import LogInit
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+from numpy import arange, sin, pi
+
+import matplotlib
+
+# uncomment the following to use wx rather than wxagg
+#matplotlib.use('WX')
+#from matplotlib.backends.backend_wx import FigureCanvasWx as FigureCanvas
+
+# comment out the following to use wx rather than wxagg
+matplotlib.use('WXAgg')
+from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigureCanvas
+
+from matplotlib.backends.backend_wx import NavigationToolbar2Wx
+
+from matplotlib.figure import Figure
+
+import wx
+import wx.lib.mixins.inspection as WIT
+TIME = []
+QW = []
+QX = []
+QY = []
+QZ = []
+
+
+class CanvasFrame(wx.Frame):
+    def __init__(self):
+        wx.Frame.__init__(self, None, -1,
+                          'CanvasFrame', size=(550, 350))
+
+        self.figure = Figure()
+        self.axes = self.figure.add_subplot(111)
+
+
+        self.axes.plot(TIME, QW, '-o', color='orange', label='QW')
+        self.axes.plot(TIME, QX, '-o', color='red', label='QX')
+        self.axes.plot(TIME, QY, '-o', color='blue', label='QY')
+        self.axes.plot(TIME, QZ, '-o', color='green', label='QZ')
+        self.axes.legend()
+        self.axes.grid(True)
+
+        self.canvas = FigureCanvas(self, -1, self.figure)
+
+        self.sizer = wx.BoxSizer(wx.VERTICAL)
+        self.sizer.Add(self.canvas, 1, wx.LEFT | wx.TOP | wx.EXPAND)
+        self.SetSizer(self.sizer)
+        self.Fit()
+
+        self.add_toolbar()  # comment this out for no toolbar
+
+    def add_toolbar(self):
+        self.toolbar = NavigationToolbar2Wx(self.canvas)
+        self.toolbar.Realize()
+        # By adding toolbar in sizer, we are able to put it at the bottom
+        # of the frame - so appearance is closer to GTK version.
+        self.sizer.Add(self.toolbar, 0, wx.LEFT | wx.EXPAND)
+        # update the axes menu on the toolbar
+        self.toolbar.update()
+
+
+# alternatively you could use
+#class App(wx.App):
+class App(WIT.InspectableApp):
+    def OnInit(self):
+        'Create the main window and insert the custom frame'
+        self.Init()
+        frame = CanvasFrame()
+        frame.Show(True)
+
+        return True
 
 logger = LogInit(pathName="./test1.log", console=True, colors=True)
-
 
 
 class Device:
@@ -50,9 +123,19 @@ class Subscriber:
         self.devices = {}
         self.mqtt_mode = mqtt_mode
         self.count = 0
+        self.prev_qw = 0.0
+        self.prev_qx = 0.0
+        self.prev_qy = 0.0
+        self.prev_qz = 0.0
+        self.time = []
+        self.qw = []
+        self.qx = []
+        self.qy = []
+        self.qz = []
+        self.not_done = True
         if self.mqtt_mode:
             self.client = mqtt.Client()
-            self.client.connect('127.0.0.1', 1883)
+            self.client.connect_async('127.0.0.1', 1883)
         else:
             #  Socket to talk to server
             self.context = zmq.Context()
@@ -72,15 +155,12 @@ class Subscriber:
         client.subscribe("VR_CONTEXT")
 
     def on_message(self, client, userdata, message):
-        self.count += 1
         msg = message.payload.decode()
         self.update_devices(msg)
-        if self.count == 1:
-            print(msg)
 
     def run(self):
         print('Listening...')
-        while True:
+        while self.not_done:
             # self.update_devices('HMD,1,1,1,0.1,0.1,0.1,0.1')
             # continue
             if self.mqtt_mode:
@@ -94,17 +174,33 @@ class Subscriber:
                 msg = str(message, "ISO-8859-1")
                 msg = msg.split('\x00', 1)[0]
                 self.update_devices(msg)
+                if self.count <= 10:
+                    self.time = []
+                    self.qw = []
+                    self.qx = []
+                    self.qy = []
+                    self.qz = []
 
     def current_milli_time(self):
         return round(time.time() * 1000)
 
     def update_devices(self, msg):
+        self.count += 1
         device, x, y, z, qw, qx, qy, qz = msg.split(',')
         x, y, z, qw, qx, qy, qz = float(x), float(y), float(z), float(qw), float(qx), float(qy), float(qz)
         try:
-            logger.info(msg + ' | ' + str(self.current_milli_time()))
+            time = self.current_milli_time()
+            logger.info(msg + ' | ' + str(time))
+            self.time.append(time)
+            self.qw.append(abs(self.prev_qw-qw))
+            self.qx.append(abs(self.prev_qx-qx))
+            self.qy.append(abs(self.prev_qy-qy))
+            self.qz.append(abs(self.prev_qz-qz))
+            self.prev_qw = qw
+            self.prev_qx = qx
+            self.prev_qy = qy
+            self.prev_qz = qz
             self.devices[device].update((x, y, z), (qw, qx, qy, qz))
-            # print((qw, qx, qy, qz))
         except KeyError:
             self.devices[device] = Device(device, (x, y, z), (qw, qx, qy, qz))
 
@@ -203,10 +299,22 @@ class Renderer:
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    sub1 = Subscriber(mqtt_mode=False)
+    sub1 = Subscriber(mqtt_mode=True)
     renderer1 = Renderer(sub1)
 
     t1 = threading.Thread(target=sub1.run)  # api loop
     t2 = threading.Thread(target=renderer1.run)  # listen and send socket loop
     t1.start()
-    t2.start()
+    # t2.start()
+    time.sleep(20)
+    sub1.not_done = False
+    TIME = sub1.time
+    QW = sub1.qw
+    QX = sub1.qx
+    QY = sub1.qy
+    QZ = sub1.qz
+
+    app = App(0)
+    app.MainLoop()
+    exit(1)
+
