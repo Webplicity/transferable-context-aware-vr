@@ -5,3 +5,7 @@ PyQt5==5.15.2
 pyzmq==22.1.0
 paho-mqtt==1.5.1
 fastlogging==0.9.5
+wxPython==4.1.1
+hbmqtt==0.9.6
+websocket-client==0.56.0
+websockets==8.1
