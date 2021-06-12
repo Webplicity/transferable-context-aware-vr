@@ -12,9 +12,10 @@ CAVR is a general, future-proof design thatexports multiple types of context inf
 Details around this project can be found in: [CAVR](CAVR.pdf)
 
 # DESIGN & IMPLEMENTATION
-The theoretical design of the framework.
+The theoretical design and used software to implement this design:
+
 ![](design.png)
-The used software to implement this design:
+
 ![](implementation.png)
  
 # INSTALL
