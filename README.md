@@ -3,14 +3,19 @@
 ![](psvr.gif)
 
 YouTube:
-HTC Vive: https://youtu.be/3XEQG9NMxoM
-PlayStation VR: https://youtu.be/SxlgeaNkngw
+- HTC Vive: https://youtu.be/3XEQG9NMxoM
+- PlayStation VR: https://youtu.be/SxlgeaNkngw
 
 # INFO
 
 CAVR is a general, future-proof design thatexports multiple types of context information that are sent over anetwork interface. This design works for basically all VR-HMDs, with the help of community-supported tools.  
-Details around this project can be found in: [a relative link](CAVR.pdf)
- 
+Details around this project can be found in: [CAVR](CAVR.pdf)
+
+# DESIGN & IMPLEMENTATION
+The theoretical design of the framework.
+![](design.png)
+The used software to implement this design:
+![](implementation.png)
  
 # INSTALL
 
