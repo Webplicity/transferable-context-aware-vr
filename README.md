@@ -51,7 +51,7 @@ Finally, we install the MQTT library, check if any errors occur!
 ```
 
 All necessary software should be installed and we can test the Context-Extraction system.
-To build IT, use the CMakeLists.txt under Context-Aware-VR/vr_tracking/CMakeLists.txt
+To build it, use the CMakeLists.txt under Context-Aware-VR/vr_tracking/CMakeLists.txt
 
 To test the system, don't forget to first install Steam \& SteamVR, once SteamVR detects the HMD correctly the system should work.
 
