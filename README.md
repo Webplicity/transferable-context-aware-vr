@@ -8,7 +8,7 @@ YouTube:
 
 # INFO
 
-CAVR is a general, future-proof design thatexports multiple types of context information that are sent over anetwork interface. This design works for basically all VR-HMDs, with the help of community-supported tools.  
+CAVR is a general, future-proof design that exports multiple types of context information that are sent over anetwork interface. This design works for basically all VR-HMDs, with the help of community-supported tools.  
 Details around this project can be found in: [CAVR](CAVR.pdf)
 
 # DESIGN & IMPLEMENTATION
