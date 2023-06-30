@@ -59,3 +59,6 @@ To test the system, don't forget to first install Steam \& SteamVR, once SteamVR
 
 The subscriber that shows the visualization is located in vr_subscriber called subscriber.py.
 For MQTT you need to run an additional instance broker.py
+
+
+Future implimentations include a web interface for the subscriber to run on a remote machine using Docker with usb passthrough to the host machine and motion capture system.
